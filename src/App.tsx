@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * @name: App.tsx
+ * @author: 偶尔会翻身的咸鱼
+ * @date: 2022-07-12 15:37
+ * @description：App.tsx
+ * @update: 2022-07-12 15:37
+ */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import * as React from 'react'
+import {FC, Fragment, memo} from 'react'
+import Routes from './router'
 
-export default App;
+import AppHeader from '@/components/AppHeader'
+
+
+const App: FC = () => {
+	return (
+			<Fragment>
+				<AppHeader/>
+				{Routes()}
+			</Fragment>
+	);
+};
+
+export default memo(App);
+
