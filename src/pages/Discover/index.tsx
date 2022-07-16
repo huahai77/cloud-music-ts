@@ -8,7 +8,6 @@
 
 import React, {FC, memo} from 'react';
 import {NavLink, Outlet} from 'react-router-dom'
-// import {renderRoutes} from 'react-router-config'
 
 import {DiscoverWrapper, Nav} from '@/pages/Discover/style'
 import {discoverNavBarList} from '@/model/navData'

@@ -1,6 +1,5 @@
 import {NavBarEnum} from '@/enum/navBar'
 import {BASE_ROUTE, DISCOVER} from '@/constant'
-import {INavBar} from '@/types/navBar'
 
 /**
  * @name: NavData
@@ -10,7 +9,11 @@ import {INavBar} from '@/types/navBar'
  * @update: 2022-07-13 11:32
  */
 
-
+export interface INavBar {
+	type: string,
+	title?: string,
+	link: string
+}
 
 export const navBarList: INavBar[] = [
 	{

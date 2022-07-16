@@ -22,10 +22,9 @@ import {
 	SearchOutlined
 } from '@ant-design/icons';
 
-import {navBarList} from '@/model/navData'
+import {navBarList, INavBar} from '@/model/navData'
 import {NavBarEnum} from '@/enum/navBar'
 import {BASE_ROUTE} from '@/constant'
-import {INavBar} from '@/types/navBar'
 
 
 const AppHeader: FC = () => {

@@ -1,5 +1,5 @@
 // 网络请求状态解析
-export default (code: number, url: string) => {
+const throwErr = (code: number, url: string) => {
 	let message = '请求错误'
 	switch (code) {
 		case 400:
@@ -39,3 +39,5 @@ export default (code: number, url: string) => {
 	}
 	return message
 }
+
+export default throwErr

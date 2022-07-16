@@ -7,18 +7,20 @@
  */
 
 import * as React from 'react'
-import {FC, Fragment, memo} from 'react'
-import Routes from './router'
+import {FC, memo} from 'react'
+import {Provider} from 'react-redux'
+import Routes from '@/router'
+import store from '@/store'
 
 import AppHeader from '@/components/AppHeader'
 
 
 const App: FC = () => {
 	return (
-			<Fragment>
+			<Provider store={store}>
 				<AppHeader/>
 				{Routes()}
-			</Fragment>
+			</Provider>
 	);
 };
 
