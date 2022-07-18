@@ -21,6 +21,7 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import {NAMESPACE} from '@/store/recommend/constants'
 import Recommend from '@/api/recommend'
+import {AlbumBean} from '@/model/recommend'
 
 /**
  * 获取banner轮播图
@@ -33,4 +34,9 @@ export const getBannerAsync = createAsyncThunk(
 export const getPopularAsync = createAsyncThunk(
   `${NAMESPACE}/popular`,
   async (limit: number) => await Recommend.fetchPopular(limit)
+)
+
+export const getUpdateAlbumAsync = createAsyncThunk(
+  `${NAMESPACE}/update_album`,
+  async (params: AlbumBean) => await Recommend.fetchUpdateAlbum(params)
 )

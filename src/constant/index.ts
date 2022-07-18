@@ -10,5 +10,7 @@ export const BASE_ROUTE: string = 'https://music.163.com'
 
 export const DISCOVER: string = '/discover'
 
-export const HOT_RECOMMEND_LIMIT = 8
+export const HOT_RECOMMEND_LIMIT: number = 8
+
+export const FALLBACK: string = `https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png`
 

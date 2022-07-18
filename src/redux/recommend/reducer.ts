@@ -27,23 +27,25 @@
 // export default reducer
 
 // TODO toolkit写法
-import {createSlice} from '@reduxjs/toolkit'
-import {RecommendProps} from '@/model/store'
+// import {createSlice} from '@reduxjs/toolkit'
+// import {RecommendProps} from '@/model/store'
+//
+// const initialState: RecommendProps = {
+// 	banners: []
+// }
+//
+// const slice = createSlice({
+// 	name: 'recommend',
+// 	initialState,
+// 	reducers: {
+// 		changeBannerAction: (state, action) => {
+// 			state.banners = action.payload
+// 		}
+// 	}
+// })
+//
+// export const {changeBannerAction} = slice.actions
+//
+// export default slice.reducer
 
-const initialState: RecommendProps = {
-	banners: []
-}
-
-const slice = createSlice({
-	name: 'recommend',
-	initialState,
-	reducers: {
-		changeBannerAction: (state, action) => {
-			state.banners = action.payload
-		}
-	}
-})
-
-export const {changeBannerAction} = slice.actions
-
-export default slice.reducer
+export default 1

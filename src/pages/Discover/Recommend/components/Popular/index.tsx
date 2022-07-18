@@ -11,14 +11,18 @@ import {useNavigate} from 'react-router-dom'
 
 import {PopularWrapper} from '@/pages/Discover/Recommend/components/Popular/style'
 import ThemeHeaderRCM from '@/components/ThemeHeaderRCM'
+import {SongCoverListWrapper} from '@/components/BaseStyled'
+import HotCover from '@/pages/Discover/Recommend/components/Popular/components/HotCover'
 
-import {useTypedDispatch} from '@/hooks/typed'
+import {useTypedDispatch, useTypedSelector} from '@/hooks/typed'
 import {getPopularAsync} from '@/store/recommend/asyncActions'
 import {HOT_RECOMMEND_LIMIT} from '@/constant'
 import {popularNav} from '@/model/recommend'
+import {shallowEqual} from 'react-redux'
 
 
 const Popular: FC = () => {
+  const {popularList} = useTypedSelector(state => state.recommend, shallowEqual)
 
   const dispatch = useTypedDispatch()
   const navigate = useNavigate()
@@ -27,20 +31,10 @@ const Popular: FC = () => {
     dispatch(getPopularAsync(HOT_RECOMMEND_LIMIT))
   }, [dispatch])
 
-  // const handleTitleClick = useCallback((e: any) => {
-  //   e.preventDefault()
-  //   navigate(`/discover/songs`)
-  // }, [navigate])
-
   const handleNavigate = useCallback((e: any, type?: string) => {
     e.preventDefault()
     navigate(type ? `/discover/songs?cat=${type}` : `/discover/songs`)
   }, [navigate])
-
-  // const handleMoreClick = useCallback((e: any) => {
-  //   e.preventDefault()
-  //   navigate(`/discover/songs`)
-  // }, [navigate])
 
   return (
     <PopularWrapper>
@@ -55,6 +49,13 @@ const Popular: FC = () => {
         handleMoreClick={handleNavigate}
       >
       </ThemeHeaderRCM>
+      <SongCoverListWrapper>
+        {
+          popularList.map(item => {
+            return <HotCover item={item} key={item.id}/>
+          })
+        }
+      </SongCoverListWrapper>
     </PopularWrapper>
   );
 };

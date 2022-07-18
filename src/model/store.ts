@@ -5,11 +5,13 @@
  * @description：recommend
  * @update: 2022-07-15 23:49
  */
-import {Banner} from '@/model/recommend'
+import {Banner, Popular} from '@/model/recommend'
 
 
 export interface RecommendProps {
-	banners: Banner[]
+  banners: Array<Banner>,
+  popularList: Array<Popular>,
+  updateAlbumList: any[]
 }
 
 

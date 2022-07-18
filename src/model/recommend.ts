@@ -17,9 +17,10 @@ export interface Popular {
   id: number,
   name: string,
   picUrl: string,
-  playCount: number,
-  trackCount: number,
-  trackNumberUpdateTime: number
+  playCount?: number,
+  trackCount?: number,
+  trackNumberUpdateTime?: number,
+  copywriter?: string
 }
 
 
@@ -40,3 +41,13 @@ export const popularNav = [
     name: '电子',
   }
 ]
+
+export class AlbumBean {
+  limit?: number
+  offset?: number
+  area: string | undefined
+  type?: string
+  year?: string | number
+  month?: string | number
+}
+

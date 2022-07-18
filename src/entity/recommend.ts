@@ -21,6 +21,7 @@ export const popularVo = (popular: Popular) => ({
   picUrl: popular.picUrl,
   playCount: popular.playCount,
   trackCount: popular.trackCount,
-  trackNumberUpdateTime: popular.trackNumberUpdateTime
+  trackNumberUpdateTime: popular.trackNumberUpdateTime,
+  copywriter: popular.copywriter
 })
 

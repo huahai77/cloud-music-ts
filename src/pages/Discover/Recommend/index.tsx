@@ -17,6 +17,7 @@ import {
   RecommendWrapper
 } from '@/pages/Discover/Recommend/style'
 import Popular from '@/pages/Discover/Recommend/components/Popular'
+import UpdateAlbum from '@/pages/Discover/Recommend/components/UpdateAlbum'
 
 
 const Recommend: FC = () => {
@@ -26,6 +27,7 @@ const Recommend: FC = () => {
       <Main className="wrap-v2">
         <div className="content wrap-v3">
           <Popular></Popular>
+          <UpdateAlbum></UpdateAlbum>
         </div>
         <div className="right">
           2

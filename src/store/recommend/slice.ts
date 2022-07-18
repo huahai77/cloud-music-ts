@@ -10,10 +10,12 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {RecommendProps} from '@/model/store'
 import {NAMESPACE} from '@/store/recommend/constants'
-import {getBannerAsync, getPopularAsync} from './asyncActions'
+import {getBannerAsync, getPopularAsync, getUpdateAlbumAsync} from './asyncActions'
 
 const initialState: RecommendProps = {
-  banners: []
+  banners: [],
+  popularList: [],
+  updateAlbumList: []
 }
 
 const slice = createSlice({
@@ -30,17 +32,22 @@ const slice = createSlice({
   // },
   extraReducers: (builder) => {
     builder.addCase(getBannerAsync.fulfilled, (state, {payload}) => {
-      // console.log(state, payload)
       state.banners = payload
     })
     builder.addCase(getBannerAsync.rejected, (state, action) => {
       console.log(action)
     })
     builder.addCase(getPopularAsync.fulfilled, (state, {payload}) => {
-      console.log(state, payload)
-      // state.banners = payload
+      state.popularList = payload
     })
     builder.addCase(getPopularAsync.rejected, (state, action) => {
+      console.log(action)
+    })
+    builder.addCase(getUpdateAlbumAsync.fulfilled, (state, {payload}) => {
+      // console.log(payload)
+      // state.popularList = payload
+    })
+    builder.addCase(getUpdateAlbumAsync.rejected, (state, action) => {
       console.log(action)
     })
   },

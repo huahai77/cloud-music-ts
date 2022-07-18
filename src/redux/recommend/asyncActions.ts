@@ -7,13 +7,15 @@
  */
 
 // TODO toolkit写法
-import {Dispatch} from "redux"
+// import {Dispatch} from "redux"
+//
+// import {changeBannerAction} from './reducer'
+//
+// import Recommend from '@/api/recommend'
+//
+// export const getBannerAction = () => async (dispatch: Dispatch): Promise<void> => {
+// 	const banners = await Recommend.fetchBanner()
+// 	dispatch(changeBannerAction(banners))
+// }
 
-import {changeBannerAction} from './reducer'
-
-import Recommend from '@/api/recommend'
-
-export const getBannerAction = () => async (dispatch: Dispatch): Promise<void> => {
-	const banners = await Recommend.fetchBanner()
-	dispatch(changeBannerAction(banners))
-}
+export default 1

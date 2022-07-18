@@ -7,7 +7,7 @@
  */
 
 import request from '@/utils/request'
-import {Banner, Popular} from '@/model/recommend'
+import {AlbumBean, Banner, Popular} from '@/model/recommend'
 import {bannerVo, popularVo} from '@/entity/recommend'
 
 class Recommend {
@@ -27,6 +27,16 @@ class Recommend {
     })
 
     return data.result.map(popularVo)
+  }
+
+  public static async fetchUpdateAlbum(params: AlbumBean): Promise<any> {
+    const data = await request({
+      url: `/top/album`,
+      method: 'GET',
+      params
+    })
+    console.log(data.albums)
+    // return data.result.map(popularVo)
   }
 }
 

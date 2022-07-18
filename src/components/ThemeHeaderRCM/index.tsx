@@ -13,9 +13,10 @@ import {RCMLeft, RCMRight, ThemeHeaderRCMWrapper} from '@/components/ThemeHeader
 
 interface Props {
   children?: ReactNode,
+  
   title: string,
   rightText?: string,
-  keyWords: Array<any>,
+  keyWords?: Array<any>,
   hasIcon?: boolean,
   hasMore?: boolean,
   handleTitleClick?: (e: MouseEvent<HTMLAnchorElement>) => void
@@ -27,7 +28,7 @@ const ThemeHeaderRCM: FC<Props> = (
   {
     title,
     rightText = '更多',
-    keyWords,
+    keyWords = [],
     hasIcon = false,
     hasMore = false,
     handleTitleClick,
