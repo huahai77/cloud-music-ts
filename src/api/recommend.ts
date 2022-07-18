@@ -7,18 +7,27 @@
  */
 
 import request from '@/utils/request'
-import {Banner} from '@/model/recommend'
-import {bannerVo} from '@/entity/recommend'
+import {Banner, Popular} from '@/model/recommend'
+import {bannerVo, popularVo} from '@/entity/recommend'
 
 class Recommend {
-	public static async fetchBanner(): Promise<Banner[]> {
-		const data = await request({
-			url: `/banner`,
-			method: 'GET',
-		})
-		
-		return data.banners.map(bannerVo)
-	}
+  public static async fetchBanner(): Promise<Banner[]> {
+    const data = await request({
+      url: `/banner`,
+      method: 'GET',
+    })
+
+    return data.banners.map(bannerVo)
+  }
+
+  public static async fetchPopular(limit: number): Promise<Popular[]> {
+    const data = await request({
+      url: `/personalized?limit=${limit}`,
+      method: 'GET',
+    })
+
+    return data.result.map(popularVo)
+  }
 }
 
 export default Recommend

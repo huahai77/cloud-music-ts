@@ -26,6 +26,11 @@ import Recommend from '@/api/recommend'
  * 获取banner轮播图
  */
 export const getBannerAsync = createAsyncThunk(
-		`${NAMESPACE}/banner`,
-		async () => await Recommend.fetchBanner(),
+  `${NAMESPACE}/banner`,
+  async () => await Recommend.fetchBanner(),
+)
+
+export const getPopularAsync = createAsyncThunk(
+  `${NAMESPACE}/popular`,
+  async (limit: number) => await Recommend.fetchPopular(limit)
 )

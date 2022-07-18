@@ -9,11 +9,12 @@
 import React, {FC, memo} from 'react';
 
 const Songs: FC = () => {
-	return (
-			<div>
-				s
-			</div>
-	);
+
+  return (
+    <div>
+      s
+    </div>
+  );
 };
 
 export default memo(Songs);

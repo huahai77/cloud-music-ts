@@ -7,34 +7,32 @@
  */
 
 import React, {
-	memo,
-	FC,
-	useEffect
+  memo,
+  FC,
 } from 'react';
 
+import Banner from './components/Banner'
 import {
-	useTypedDispatch,
-	useTypedSelector,
-} from '@/hooks/typed'
+  Main,
+  RecommendWrapper
+} from '@/pages/Discover/Recommend/style'
+import Popular from '@/pages/Discover/Recommend/components/Popular'
 
-import {getBannerAsync} from '@/store/recommend/asyncActions'
-import {shallowEqual} from 'react-redux'
 
 const Recommend: FC = () => {
-	const {banners} = useTypedSelector(state => state.recommend, shallowEqual)
-	const dispatch = useTypedDispatch()
-
-	useEffect(() => {
-		dispatch(getBannerAsync())
-	}, [dispatch])
-
-	return (
-			<div>
-				{banners.map(item => {
-					return <div>{item.targetId}</div>
-				})}
-			</div>
-	);
+  return (
+    <RecommendWrapper>
+      <Banner/>
+      <Main className="wrap-v2">
+        <div className="content wrap-v3">
+          <Popular></Popular>
+        </div>
+        <div className="right">
+          2
+        </div>
+      </Main>
+    </RecommendWrapper>
+  );
 };
 
 export default memo(Recommend);

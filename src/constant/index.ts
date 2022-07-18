@@ -10,3 +10,5 @@ export const BASE_ROUTE: string = 'https://music.163.com'
 
 export const DISCOVER: string = '/discover'
 
+export const HOT_RECOMMEND_LIMIT = 8
+

@@ -7,7 +7,36 @@
  */
 
 export interface Banner {
-	imageUrl: string,
-	targetId: number | string,
-	url?: string
+  imageUrl: string,
+  targetId: number | string,
+  url?: string,
+  typeTitle?: string
 }
+
+export interface Popular {
+  id: number,
+  name: string,
+  picUrl: string,
+  playCount: number,
+  trackCount: number,
+  trackNumberUpdateTime: number
+}
+
+
+export const popularNav = [
+  {
+    name: '华语',
+  },
+  {
+    name: '流行',
+  },
+  {
+    name: '摇滚',
+  },
+  {
+    name: '民谣',
+  },
+  {
+    name: '电子',
+  }
+]
