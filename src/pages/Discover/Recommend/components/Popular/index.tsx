@@ -11,7 +11,7 @@ import {useNavigate} from 'react-router-dom'
 
 import {PopularWrapper} from '@/pages/Discover/Recommend/components/Popular/style'
 import ThemeHeaderRCM from '@/components/ThemeHeaderRCM'
-import {SongCoverListWrapper} from '@/components/BaseStyled'
+import {SongCoverList} from '@/components/BaseStyled'
 import HotCover from '@/pages/Discover/Recommend/components/Popular/components/HotCover'
 
 import {useTypedDispatch, useTypedSelector} from '@/hooks/typed'
@@ -49,13 +49,13 @@ const Popular: FC = () => {
         handleMoreClick={handleNavigate}
       >
       </ThemeHeaderRCM>
-      <SongCoverListWrapper>
+      <SongCoverList>
         {
           popularList.map(item => {
             return <HotCover item={item} key={item.id}/>
           })
         }
-      </SongCoverListWrapper>
+      </SongCoverList>
     </PopularWrapper>
   );
 };

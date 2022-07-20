@@ -13,7 +13,6 @@ import {RCMLeft, RCMRight, ThemeHeaderRCMWrapper} from '@/components/ThemeHeader
 
 interface Props {
   children?: ReactNode,
-  
   title: string,
   rightText?: string,
   keyWords?: Array<any>,

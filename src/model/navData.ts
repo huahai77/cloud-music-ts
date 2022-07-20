@@ -1,4 +1,4 @@
-import {NavBarEnum} from '@/enum/navBar'
+import {NavigatorEnum} from '@/enum/navBar'
 import {BASE_ROUTE, DISCOVER} from '@/constant'
 
 /**
@@ -10,74 +10,74 @@ import {BASE_ROUTE, DISCOVER} from '@/constant'
  */
 
 export interface INavBar {
-	type: string,
-	title?: string,
-	link: string
+  type: NavigatorEnum,
+  title?: string,
+  link: string
 }
 
 export const navBarList: INavBar[] = [
-	{
-		type: NavBarEnum.ROUTE,
-		title: '发现音乐',
-		link: '/'
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '我的音乐',
-		link: '/mine'
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '关注',
-		link: '/friend'
-	},
-	{
-		type: NavBarEnum.JUMP,
-		title: '商城',
-		link: `${BASE_ROUTE}/store/product`
-	},
-	{
-		type: NavBarEnum.JUMP,
-		title: '音乐人',
-		link: `${BASE_ROUTE}/st/musician`
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '下载客户端',
-		link: `/download`
-	}
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '发现音乐',
+    link: '/'
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '我的音乐',
+    link: '/mine'
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '关注',
+    link: '/friend'
+  },
+  {
+    type: NavigatorEnum.JUMP,
+    title: '商城',
+    link: `${BASE_ROUTE}/store/product`
+  },
+  {
+    type: NavigatorEnum.JUMP,
+    title: '音乐人',
+    link: `${BASE_ROUTE}/st/musician`
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '下载客户端',
+    link: `/download`
+  }
 ]
 
 
 export const discoverNavBarList = [
-	{
-		type: NavBarEnum.ROUTE,
-		title: '推荐',
-		link: `${DISCOVER}/recommend`
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '排行榜',
-		link: `${DISCOVER}/ranking`
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '歌单',
-		link: `${DISCOVER}/songs`
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '主播电台',
-		link: `${DISCOVER}/djradio`
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '歌手',
-		link: `${DISCOVER}/artist`
-	},
-	{
-		type: NavBarEnum.ROUTE,
-		title: '新碟上架',
-		link: `${DISCOVER}/album`
-	}
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '推荐',
+    link: `${DISCOVER}/recommend`
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '排行榜',
+    link: `${DISCOVER}/ranking`
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '歌单',
+    link: `${DISCOVER}/songs`
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '主播电台',
+    link: `${DISCOVER}/djradio`
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '歌手',
+    link: `${DISCOVER}/artist`
+  },
+  {
+    type: NavigatorEnum.ROUTE,
+    title: '新碟上架',
+    link: `${DISCOVER}/album`
+  }
 ]

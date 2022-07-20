@@ -14,3 +14,4 @@ export const HOT_RECOMMEND_LIMIT: number = 8
 
 export const FALLBACK: string = `https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png`
 
+export const ALBUM_PAGE_SIZE: number = 5

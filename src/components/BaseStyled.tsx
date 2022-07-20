@@ -7,7 +7,7 @@
  */
 import styled from 'styled-components'
 
-export const SongCoverListWrapper = styled('div')`
+export const SongCoverList = styled('div')`
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;

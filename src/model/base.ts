@@ -32,3 +32,39 @@ type ReadonlyUser = ReadonlyType<IUser>
 const user: ReadonlyUser = {}
 
 console.log(user)
+
+/**
+ * 接口限定枚举
+ */
+interface Approval {
+  id: number,
+  name: string,
+  type: TypeEnum
+}
+
+enum TypeEnum {
+  APPROVAL,
+  DOING
+}
+
+const query: Approval = {
+  id: 1,
+  name: 'str',
+  type: TypeEnum.APPROVAL
+}
+
+console.log(query)
+
+
+export interface PageBean {
+  pageSize: number
+  pageNum: number
+}
+
+export interface PageResult<T> {
+  pageSize: number
+  pageNum: number
+  total: number
+  totalPages: number
+  data: T[] | []
+}

@@ -42,12 +42,19 @@ export const popularNav = [
   }
 ]
 
-export class AlbumBean {
-  limit?: number
+export interface AlbumBean {
+  limit: number
   offset?: number
-  area: string | undefined
+  area: string
   type?: string
   year?: string | number
   month?: string | number
 }
 
+export interface Album {
+  blurPicUrl?: string
+  id: number
+  name?: string
+  picUrl?: string
+  publishTime?: number
+}

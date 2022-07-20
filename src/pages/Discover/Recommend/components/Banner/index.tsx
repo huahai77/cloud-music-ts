@@ -12,7 +12,8 @@ import React, {
   useEffect,
   useRef,
   useCallback,
-  useState
+  useState,
+  MutableRefObject
 } from 'react';
 
 import {Carousel} from 'antd';
@@ -25,10 +26,11 @@ import {
 import {shallowEqual} from 'react-redux'
 
 import {getBannerAsync} from '@/store/recommend/asyncActions'
+import {CarouselRef} from 'antd/lib/carousel'
 
 const Banner: FC = () => {
   const [bannerCurrIdx, setBannerCurrIdx] = useState<number>(0)
-  const bannerRef = useRef<any>()
+  const bannerRef = useRef() as MutableRefObject<CarouselRef>
   const {banners} = useTypedSelector(state => state.recommend, shallowEqual)
   const dispatch = useTypedDispatch()
 

@@ -6,7 +6,7 @@
  * @update: 2022-07-13 11:35
  */
 
-export enum NavBarEnum {
-	JUMP = 'jump',
-	ROUTE = 'route'
+export enum NavigatorEnum {
+  JUMP,
+  ROUTE,
 }

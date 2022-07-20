@@ -45,7 +45,7 @@ const slice = createSlice({
     })
     builder.addCase(getUpdateAlbumAsync.fulfilled, (state, {payload}) => {
       // console.log(payload)
-      // state.popularList = payload
+      state.updateAlbumList = payload
     })
     builder.addCase(getUpdateAlbumAsync.rejected, (state, action) => {
       console.log(action)
