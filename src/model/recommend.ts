@@ -57,4 +57,6 @@ export interface Album {
   name?: string
   picUrl?: string
   publishTime?: number
+  artist: object
+  artists: any[]
 }

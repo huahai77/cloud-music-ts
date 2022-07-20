@@ -30,6 +30,8 @@ export const updateAlbumVo = (album: Album) => ({
   id: album.id,
   name: album.name,
   picUrl: album.picUrl,
-  publishTime: album.publishTime
+  publishTime: album.publishTime,
+  artist: album.artist,
+  artists: album.artists
 })
 

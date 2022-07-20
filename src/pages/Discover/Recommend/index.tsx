@@ -18,6 +18,7 @@ import {
 } from '@/pages/Discover/Recommend/style'
 import Popular from '@/pages/Discover/Recommend/components/Popular'
 import UpdateAlbum from '@/pages/Discover/Recommend/components/UpdateAlbum'
+import Ranking from '@/pages/Discover/Recommend/components/Ranking'
 
 
 const Recommend: FC = () => {
@@ -26,8 +27,9 @@ const Recommend: FC = () => {
       <Banner/>
       <Main className="wrap-v2">
         <div className="content wrap-v3">
-          <Popular></Popular>
-          <UpdateAlbum></UpdateAlbum>
+          <Popular/>
+          <UpdateAlbum/>
+          <Ranking/>
         </div>
         <div className="right">
           2

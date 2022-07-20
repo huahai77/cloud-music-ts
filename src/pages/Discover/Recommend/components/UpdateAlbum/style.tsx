@@ -15,7 +15,6 @@ export const UpdateAlbumWrapper = styled('div')`
 export const Main = styled('div')`
   margin-top: 20px;
   width: 100%;
-  height: 184px;
   padding: 0 20px;
   background: #f5f5f5;
   border: 1px solid #eee;
@@ -25,11 +24,10 @@ export const Main = styled('div')`
 `
 
 export const Slideshow = styled('div')`
+  padding: 20px 0 10px;
   width: 100%;
-  height: 150px;
 
   .ant-carousel, .slick-list {
-    height: 150px;
     overflow: hidden;
   }
 
@@ -37,11 +35,6 @@ export const Slideshow = styled('div')`
     display: flex !important;
     align-items: center;
     justify-content: space-between;
-
-    img {
-      width: 120px;
-      height: 120px;
-    }
   }
 `
 

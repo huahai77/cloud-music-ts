@@ -11,9 +11,12 @@ export const RecommendWrapper = styled('div')`
 `
 
 export const Main = styled('div')`
+  background-color: #fff;
+  border: 1px solid #ccc;
   display: flex;
 
   .content {
+    border-right: 1px solid #ccc;
     padding: 20px 20px 40px;
   }
 

@@ -9,5 +9,7 @@ import {Album} from '@/model/recommend'
  */
 
 export interface AlbumValue {
-  value: Album
+  item: Album
+  size: number
+  width: number
 }

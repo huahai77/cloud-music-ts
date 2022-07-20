@@ -29,7 +29,7 @@ const UpdateAlbum: FC = () => {
 
   useEffect(() => {
     dispatch(getUpdateAlbumAsync({
-      limit: 10,
+      limit: 50,
       area: 'ZH'
     }))
   }, [dispatch])
@@ -67,11 +67,15 @@ const UpdateAlbum: FC = () => {
                     {
                       _diffSliceList(num).map(item => {
                         return (
-                          <UpdateAlbumContext.Provider key={item.id} value={{value: item}}>
-                            <AlbumCard
-                              size={100}
-                              width={118}
-                            />
+                          <UpdateAlbumContext.Provider
+                            key={item.id}
+                            value={{
+                              item: item,
+                              size: 100,
+                              width: 118
+                            }}
+                          >
+                            <AlbumCard/>
                           </UpdateAlbumContext.Provider>
                         )
                       })
